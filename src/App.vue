@@ -1,10 +1,12 @@
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
 import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
 
 export default {
     components: {
-        AppHeader
+        AppHeader,
+        AppMain
     }
 }
 </script>
@@ -12,14 +14,10 @@ export default {
 <template>
     <AppHeader />
     <main>
-
+        <AppMain />
     </main>
 </template>
 
 <style lang="scss">
 @use './styles/general.scss';
-
-main {
-    padding-top: 20px;
-}
 </style>
