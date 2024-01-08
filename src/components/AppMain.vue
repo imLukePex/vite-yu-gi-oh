@@ -1,23 +1,40 @@
 <script>
+import SingleCard from '../components/SingleCard.vue'
+
+// Import Store.js
+import { store } from '../store';
+
 export default {
-    name: 'AppMain'
+    name: 'AppMain',
+    components: {
+        SingleCard,
+    },
+    data() {
+        return {
+            store,
+        }
+    }
 }
-
-
 </script>
 
 <template>
-    <div class="jumbotron">
+    <div class="jumbotron"></div>
 
-    </div>
+    <div class="container">
+        <div class="title-category">
+            <div class="logo">
+                <img src="../../public/img/Yu-Gi-Oh logo.png" alt="Yu-Gi-Oh Logo">
+            </div>
 
-    <div class="title-category">
-        <div class="logo">
-            <img src="../../public/img/" alt="">
+            <select name="type" id="card-type">
+                <option value="alien">Alien</option>
+            </select>
         </div>
 
-        <div class="button-bestsellers">
-            Best Sellers
+        <div class="row">
+            <div v-for="card in store.cardList" :key="card.id" class="col-6 col-md-4 col-lg-3 mb-5 cards">
+                <SingleCard :info="card" />
+            </div>
         </div>
     </div>
 </template>
@@ -28,5 +45,34 @@ export default {
     height: 400px;
     background-size: cover;
     background-position: bottom;
+}
+
+.title-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-bottom: 1px solid black;
+    margin-bottom: 70px;
+
+    .logo {
+
+
+        img {
+            width: 180px;
+            margin-bottom: -55px;
+        }
+    }
+
+    select {
+        width: 100px;
+        height: 40px;
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
 }
 </style>

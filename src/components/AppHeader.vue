@@ -26,14 +26,14 @@ export default {
                         </li>
                     </ul>
                 </div>
-                <button class="btn btn-outline-success" type="submit">Contacts Us</button>
+                <button class="btn btn-outline-primary" type="submit">Contacts Us</button>
             </div>
         </nav>
 
-        <nav class="navbar navbar-dark bg-primary j-flex">
+        <nav class="navbar navbar-dark j-flex">
             <form class="d-flex" role="search">
                 <input class="form-control me-2" type="search" placeholder="Cerca Cardmarket..." aria-label="Search">
-                <button class="btn btn-dark" type="submit">Search</button>
+                <button class="btn btn-light" type="submit">Search</button>
             </form>
         </nav>
     </header>
@@ -49,10 +49,12 @@ a {
     font-size: 12px;
     display: flex;
     align-items: center;
+    color: #012169;
 }
 
 .j-flex {
     justify-content: center;
+    background-color: #012169;
 
     .form-control {
         padding-right: 800px;
