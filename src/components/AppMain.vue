@@ -18,7 +18,18 @@ export default {
 </script>
 
 <template>
-    <div class="jumbotron"></div>
+    <div class="jumbotron">
+        <div class="wrapper-up">
+            <div class="text-jumbotron">
+                <h3 class="title-jumbotron">25TH ANNIVERSARY RARITY COLLECTION</h3>
+                <p>
+                    Get Your Super Ultra Secret Platinum Quarter Century Ultimate Collector Rare Card!
+                </p>
+
+                <button class="btn btn-primary" type="submit">BUY NOW</button>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="title-category">

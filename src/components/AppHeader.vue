@@ -2,8 +2,6 @@
 export default {
     name: 'AppHeader'
 }
-
-
 </script>
 
 <template>
@@ -29,13 +27,6 @@ export default {
                 <button class="btn btn-outline-primary" type="submit">Contacts Us</button>
             </div>
         </nav>
-
-        <nav class="navbar navbar-dark j-flex">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Cerca Cardmarket..." aria-label="Search">
-                <button class="btn btn-light" type="submit">Search</button>
-            </form>
-        </nav>
     </header>
 </template>
 
@@ -50,15 +41,5 @@ a {
     display: flex;
     align-items: center;
     color: #012169;
-}
-
-.j-flex {
-    justify-content: center;
-    background-color: #012169;
-
-    .form-control {
-        padding-right: 800px;
-        font-size: 14px;
-    }
 }
 </style>
