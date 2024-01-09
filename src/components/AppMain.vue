@@ -1,5 +1,6 @@
 <script>
 import SingleCard from '../components/SingleCard.vue'
+import SelectFilter from './SelectFilter.vue';
 
 // Import Store.js
 import { store } from '../store';
@@ -8,6 +9,7 @@ export default {
     name: 'AppMain',
     components: {
         SingleCard,
+        SelectFilter
     },
     data() {
         return {
@@ -37,9 +39,7 @@ export default {
                 <img src="../../public/img/Yu-Gi-Oh logo.png" alt="Yu-Gi-Oh Logo">
             </div>
 
-            <select name="type" id="card-type">
-                <option value="alien">Alien</option>
-            </select>
+            <SelectFilter @performSelect="getCard" />
         </div>
 
         <div class="row">
@@ -72,13 +72,6 @@ export default {
             width: 180px;
             margin-bottom: -55px;
         }
-    }
-
-    select {
-        width: 100px;
-        height: 40px;
-        font-size: 15px;
-        margin-bottom: 12px;
     }
 }
 

@@ -24,10 +24,20 @@ export default {
     methods: {
         getCard() {
             let myUrl = store.apiURL;
+            let myArchUrl = store.archApiURL;
 
             // se utente ha fatto una ricerca
-            if (store.searchText !== "") {
-                myUrl += `?${store.nameParam}=${store.searchCard}`
+            if (store.searchCard !== "") {
+                myUrl += `?${store.nameParam}=${store.searchCard}`;
+            }
+
+            if (store.searchArch !== "") {
+
+                if (myUrl.includes('?')) {
+                    myUrl += `&${store.archParam}=${store.searchArch}`;
+                } else {
+                    myUrl += `?${store.archParam}=${store.searchArch}`;
+                }
             }
 
             axios
@@ -35,6 +45,16 @@ export default {
                 .then((res => {
                     console.log(res.data.data);
                     store.cardList = res.data.data;
+                }))
+                .catch((err) => {
+                    console.log("Errori", err);
+                });
+
+            axios
+                .get(myArchUrl)
+                .then((res => {
+                    console.log(res.data);
+                    store.archList = res.data;
                 }))
                 .catch((err) => {
                     console.log("Errori", err);
