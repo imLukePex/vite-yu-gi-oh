@@ -31,15 +31,9 @@ export default {
                 myUrl += `?${store.nameParam}=${store.searchCard}`;
             }
 
-            if (store.searchArch !== "") {
-
-                if (myUrl.includes('?')) {
-                    myUrl += `&${store.archParam}=${store.searchArch}`;
-                } else {
-                    myUrl += `?${store.archParam}=${store.searchArch}`;
-                }
+            if (store.searchArch) {
+                myUrl += `&${store.archParam}=${store.searchArch}`;
             }
-
             axios
                 .get(myUrl)
                 .then((res => {
