@@ -8,12 +8,6 @@ export default {
         return {
             store,
         }
-    },
-    methods: {
-        resetSearch() {
-            store.searchCard = "";
-            this.$emit('performSearch');
-        }
     }
 }
 </script>
@@ -33,7 +27,7 @@ select {
     height: 30px;
     font-size: 15px;
     margin-bottom: 12px;
-    background-color: rgb(49, 40, 40);
+    background-color: rgb(50, 41, 41);
     color: #ffff;
 }
 </style>

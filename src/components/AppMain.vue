@@ -1,6 +1,6 @@
 <script>
-import SingleCard from '../components/SingleCard.vue'
 import SelectFilter from './SelectFilter.vue';
+import SingleCard from '../components/SingleCard.vue'
 
 // Import Store.js
 import { store } from '../store';
@@ -21,15 +21,13 @@ export default {
 
 <template>
     <div class="jumbotron">
-        <div class="wrapper-up">
-            <div class="text-jumbotron">
-                <h3 class="title-jumbotron">25TH ANNIVERSARY RARITY COLLECTION</h3>
-                <p>
-                    Get Your Super Ultra Secret Platinum Quarter Century Ultimate Collector Rare Card!
-                </p>
+        <div class="text-jumbotron">
+            <h3 class="title-jumbotron">25TH ANNIVERSARY RARITY COLLECTION</h3>
+            <p>
+                Get Your Super Ultra Secret Platinum Quarter Century Ultimate Collector Rare Card!
+            </p>
 
-                <button class="btn btn-primary" type="submit">BUY NOW</button>
-            </div>
+            <button class="btn btn-primary" type="submit">BUY NOW</button>
         </div>
     </div>
 
@@ -56,6 +54,24 @@ export default {
     height: 400px;
     background-size: cover;
     background-position: bottom;
+    position: relative;
+
+    .text-jumbotron {
+        position: absolute;
+        top: 29%;
+        left: 18%;
+        color: #ffff;
+
+        .title-jumbotron {
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+
 }
 
 .title-category {
